@@ -1,0 +1,15 @@
+# Made with Protocode
+# Generated on 2025-04-07 at 10:37:18
+
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .protocode/Dockerfile
+    volumes:
+      - .:/app
+    command: npm start
+    labels:
+      protocode.alias.node: docker-compose run --rm app node
+      protocode.alias.npm: docker-compose run --rm app npm
